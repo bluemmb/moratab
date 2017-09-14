@@ -1,0 +1,50 @@
+
+body {
+    background: #F5F5F5;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: IRMitra;
+    font-weight: normal;
+    src: url('style/IRMitra.woff') format('woff');
+}
+
+.modal .btn, .modal p {
+    font-family: IRMitra;
+}
+
+#view {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    margin: 0px;
+    padding: 50px 30px;
+    font-size: 20px;
+    font-family: IRMitra;
+    overflow-y: auto;
+}
+
+#moratab {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 50%;
+    margin: 0px;
+    padding: 30px;
+    font-size: 20px;
+    font-family: IRMitra;
+    overflow-y: auto;
+}
+
+#wmd-input {
+    font-family: IRMitra;
+    font-size: 20px;	
+}
+
+.wmd-buttons {
+    width: 100% !important;
+}

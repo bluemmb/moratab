@@ -10,20 +10,10 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans|Fira+Mono);
 
 
-/*
-#view * {
-	font-family: 'Open Sans','Droid Arabic Naskh', serif;
-}
-*/
-
 #view {
 	direction: rtl;
 	background-color: white;
 	padding: 50px;
-}
-
-#view h1,#view h2,#view h3,#view h4,#view h5,#view h6,#view p,#view div,#view strong,#view em,#view ul,#view ol,#view li {
-	font-family:  'Open Sans','Droid Arabic Naskh', serif;
 }
 
 #view a {
@@ -41,6 +31,9 @@
 #view li li li {
 	padding-right: 4em;
 }
+
+
+/* Copied from editor.css styles */
 
 #view code {
 	display: inline-block;
@@ -60,4 +53,116 @@
 	font-size: 0.9em;
 	color: #913D88;
 	background-color: beige;
+}
+
+
+
+#view .code,
+#view .pre,
+#view .table {
+  font-family: "Courier New", monospace;
+  font-size: 80%;
+  color: #29333d;
+}
+#view .tag {
+  color: #29333d;
+}
+#view .tag .punctuation,
+#view .tag .attr-value,
+#view .tag .attr-name {
+  font-weight: normal;
+}
+#view .latex,
+#view .math {
+  color: #668099;
+}
+#view .entity {
+  color: #668099;
+}
+#view .comment {
+  font-size: 0.9em;
+  color: rgba(102, 128, 153, 0.6);
+}
+#view .keyword {
+  color: #47596b;
+  font-weight: bold;
+}
+#view .code,
+#view .img,
+#view .imgref,
+#view .pre,
+#view .table {
+  background-color: rgba(102, 128, 153, 0.075);
+}
+#view .pre,
+#view .table {
+  padding: 4px 0;
+}
+#view .link .md-underlined-text,
+#view .linkref .md-underlined-text {
+  color: inherit;
+}
+#view .blockquote {
+  color: #668099;
+}
+#view .h1,
+#view .h11 {
+  font-size: 1.7em;
+}
+#view .h2,
+#view .h22 {
+  font-size: 1.4em;
+}
+#view .h3 {
+  font-size: 1.2em;
+}
+#view .h4 {
+  font-size: 1.1em;
+}
+#view .h5 {
+  font-size: 1em;
+}
+#view .h6 {
+  font-size: 0.9em;
+}
+#view .md-hash {
+  color: rgba(102, 128, 153, 0.4);
+}
+#view .md,
+#view .hr {
+  color: rgba(102, 128, 153, 0.6);
+  font-style: normal;
+  font-weight: normal;
+}
+#view .em,
+#view .em .md {
+  font-style: italic;
+}
+#view .strong,
+#view .strong .md {
+  font-weight: bold;
+}
+#view .md-strike-text {
+  text-decoration: line-through;
+}
+#view .url,
+#view .email,
+#view .md-underlined-text {
+  text-decoration: underline;
+}
+#view .linkdef .url {
+  color: rgba(102, 128, 153, 0.6);
+}
+#view .md-bang,
+#view .md-alt,
+#view .md-title {
+  color: #587ea4;
+}
+#view .ltr {
+  direction: ltr;
+  display: inline-block;
+  width: 100%;
+}
+#view .ltr.pre {
+  display: block;
 }
