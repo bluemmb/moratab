@@ -109,7 +109,6 @@ $$ P(E) = {n \choose k} p^k (1-p)^{ n-k} $$
 
 		setInterval(function(){
 			var content = $('#moratab').text();
-			localStorage['content'] = content;
 			$('#view').html(marked(content));
 		}, 3000);
 
