@@ -13,6 +13,8 @@
 <script type="text/javascript" src="editor/buttons.js"></script>
 <script type="text/javascript" src="editor/editor.js"></script>
 
+<script type="text/javascript" src="view/marked.js"></script>
+
 <link type="text/css" rel="stylesheet" href="editor/editor.css">
 
 <style type="text/css">
@@ -36,7 +38,9 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-6">
-			سلام
+<div id="view">
+
+</div>
 		</div>
 		<div class="col-md-6 container">
 <div id="moratab">
@@ -90,8 +94,24 @@ $$ P(E) = {n \choose k} p^k (1-p)^{ n-k} $$
 </div>
 
 <script type="text/javascript">
-	content = $('<textarea/>').html($('#moratab').html()).val();
-	var editor = $('#moratab').moratab(content, {strings: {help: ''}});
+
+	$(document).ready( function (){
+		
+		// Initialize Editor
+		content = $('<textarea/>').html($('#moratab').html()).val();
+		var editor = $('#moratab').moratab(content, {strings: {help: ''}});
+
+		// Initialize View
+		var content = $('#moratab').text();
+		$('#view').html(marked(content));
+
+		setInterval(function(){
+			var content = $('#moratab').text();
+			localStorage['content'] = content;
+			$('#view').html(marked(content));
+		}, 3000);
+
+	} );
 </script>
 
 </body>
