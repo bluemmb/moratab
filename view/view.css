@@ -1,0 +1,63 @@
+
+/*
+	Style on output of marked.js
+
+	Base source of this css file is from 
+		: https://github.com/dariubs/rtlmd/blob/gh-pages/app/css/style.css
+*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Fira+Mono);
+
+
+/*
+#view * {
+	font-family: 'Open Sans','Droid Arabic Naskh', serif;
+}
+*/
+
+#view {
+	direction: rtl;
+	background-color: white;
+	padding: 50px;
+}
+
+#view h1,#view h2,#view h3,#view h4,#view h5,#view h6,#view p,#view div,#view strong,#view em,#view ul,#view ol,#view li {
+	font-family:  'Open Sans','Droid Arabic Naskh', serif;
+}
+
+#view a {
+	text-decoration: none;
+}
+
+#view li {
+	padding-right: 1em;
+}
+
+#view li li {
+	padding-right: 2em;
+}
+
+#view li li li {
+	padding-right: 4em;
+}
+
+#view code {
+	display: inline-block;
+	direction: ltr;
+	font-family: 'Fira Mono', sans-serif;
+	padding: 0.5em;
+	font-size: 0.9em;
+	color: #913D88;
+	background-color: beige;
+}
+
+#view pre code {
+	display: block;
+	direction: ltr;
+	font-family: 'Fira Mono', sans-serif;
+	margin-left: 2em;
+	font-size: 0.9em;
+	color: #913D88;
+	background-color: beige;
+}
