@@ -112,6 +112,9 @@
                                                   * image url (or null if the user cancelled). If this hook returns false, the default dialog will be used.
                                                   */
 
+        // Extra hooks
+        hooks.addFalse("insertLinkDialog");
+
         this.getConverter = function () { return markdownConverter; }
 
         var that = this,
@@ -867,7 +870,9 @@
                 return;
 
 
-            var text = panels.input.value;
+            // Because we are using div instead of textarea. 
+            //   Next line has been changed ot use innerText instead of value
+            var text = panels.input.innerText;
             if (text && text == oldInputText) {
                 return; // Input text hasn't changed.
             }

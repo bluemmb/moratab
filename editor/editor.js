@@ -828,9 +828,13 @@ $.fn.moratab = function (defaultContent, editorOptions) {
 			return pagedownEditor.uiManager.setUndoRedoButtonStates();
 		}
 
+		// Use converter
+		var converter = new Markdown.Converter();
+		Markdown.Extra.init(converter, {highlighter: "prettify"});
+
 		// Create the converter and the editor
 		editorOptions.undoManager = editor.undoMgr;
-		pagedownEditor = new Markdown.Editor(undefined, editorOptions);
+		pagedownEditor = new Markdown.Editor(converter, "" , editorOptions);
 
 		// Custom insert link dialog
 		pagedownEditor.hooks.set("insertLinkDialog", function(callback) {
