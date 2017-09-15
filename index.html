@@ -3,25 +3,33 @@
 <head>
 	<title>مرتب</title>
 	<meta charset="utf-8" />
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<script type="text/javascript" src="view/Markdown.Converter.js"></script>
+	<script type="text/javascript" src="view/Markdown.Sanitizer.js"></script>
+	<script type="text/javascript" src="view/Markdown.Editor.js"></script>
+	<script type="text/javascript" src="view/Markdown.Extra.js"></script>
+	<script type="text/javascript" src="view/prettify.js"></script>
+
+	<script type="text/javascript" src="editor/libs.js"></script>
+	<script type="text/javascript" src="editor/syntax.js"></script>
+	<!-- <script type="text/javascript" src="editor/buttons.js"></script> -->
+	<script type="text/javascript" src="editor/editor.js"></script>
+
+	<link type="text/css" rel="stylesheet" href="view/view.css">
+	<link type="text/css" rel="stylesheet" href="view/prettify.css">
+	<link type="text/css" rel="stylesheet" href="editor/editor.css">
+	<link type="text/css" rel="stylesheet" href="style.css">
+
 </head>
 <body>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-<script type="text/javascript" src="editor/libs.js"></script>
-<script type="text/javascript" src="editor/syntax.js"></script>
-<script type="text/javascript" src="editor/buttons.js"></script>
-<script type="text/javascript" src="editor/editor.js"></script>
-
-<script type="text/javascript" src="view/marked.js"></script>
-
-<link type="text/css" rel="stylesheet" href="editor/editor.css">
-<link type="text/css" rel="stylesheet" href="view/view.css">
-<link type="text/css" rel="stylesheet" href="style.css">
-
 
 <div id="view">
+	<div id="wmd-preview">
 
+	</div>
 </div>
 <div id="moratab"># مرتب
 
@@ -67,27 +75,15 @@ $$ P(E) = {n \choose k} p^k (1-p)^{ n-k} $$
 [پیوند]: http://peyvandha.ir
 [ورد]: http://office.microsoft.com/en-us/word
 [چیز خیلی مزخرفی]: http://www.antipope.org/charlie/blog-static/2013/10/why-microsoft-word-must-die.html
+[^Footnote]: http://www.antipope.org/charlie/blog-static/2013/10/why-microsoft-word-must-die.html
 </div>
 
 <script type="text/javascript">
 
 	$(document).ready( function (){
-		
 		// Initialize Editor
 		content = $('<textarea/>').html($('#moratab').html()).val();
 		var editor = $('#moratab').moratab(content, {strings: {help: ''}});
-
-		// Initialize View
-		var content = $('#moratab').text();
-		$('#view').html(marked(content));
-
-		
-		setInterval(function(){
-			var content = $('#moratab').text();
-			$('#view').html(marked(content));
-		}, 3000);
-		
-
 	} );
 </script>
 
