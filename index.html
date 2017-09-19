@@ -8,19 +8,27 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
+<script>
+	Markdown = {};
+</script>
+
+<script type="text/javascript" src="view/Markdown.Converter.js"></script>
 <script type="text/javascript" src="editor/libs.js"></script>
 <script type="text/javascript" src="editor/syntax.js"></script>
 <script type="text/javascript" src="editor/buttons.js"></script>
 <script type="text/javascript" src="editor/editor.js"></script>
+<script type="text/javascript" src="view/Markdown.Extra.js"></script>
 
-<script type="text/javascript" src="view/marked.js"></script>
+<!-- <script type="text/javascript" src="view/marked.js"></script> -->
 
 <link type="text/css" rel="stylesheet" href="editor/editor.css">
 <link type="text/css" rel="stylesheet" href="view/view.css">
 <link type="text/css" rel="stylesheet" href="style.css">
 
+<button id="viewbtn" style="position:absolute; left:20px; top:10px; z-index:100;">View</button>
 
 <div id="view">
+	
 
 </div>
 <div id="moratab"># مرتب
@@ -76,17 +84,21 @@ $$ P(E) = {n \choose k} p^k (1-p)^{ n-k} $$
 		// Initialize Editor
 		content = $('<textarea/>').html($('#moratab').html()).val();
 		var editor = $('#moratab').moratab(content, {strings: {help: ''}});
-
+		
 		// Initialize View
-		var content = $('#moratab').text();
-		$('#view').html(marked(content));
+		function view() {
+			var text = $('#moratab').text();
+			var converter = new Markdown.Converter();
+			Markdown.Extra.init(converter, {});
+			var html = converter.makeHtml(text);
+			console.log( text );
+			$('#view').html(html);
+		}
 
-		
-		setInterval(function(){
-			var content = $('#moratab').text();
-			$('#view').html(marked(content));
-		}, 3000);
-		
+		view();
+		$( "#viewbtn" ).on( "click" , function() {
+			view();
+		} );
 
 	} );
 </script>
