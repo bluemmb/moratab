@@ -6,64 +6,136 @@
 		: https://github.com/dariubs/rtlmd/blob/gh-pages/app/css/style.css
 */
 
-@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans|Fira+Mono);
+@import url(https://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Fira+Mono);
 
 
 #view {
 	direction: rtl;
 	background-color: white;
-	padding: 50px;
+	padding: 60px;
 }
 
 #view a {
 	text-decoration: none;
 }
 
-#view li {
-	padding-right: 1em;
-}
-
-#view li li {
-	padding-right: 2em;
-}
-
-#view li li li {
-	padding-right: 4em;
-}
-
 
 /* Copied from editor.css styles */
 
+
+#view h1 {
+  font-size: 1.7em;
+}
+#view h2 {
+  font-size: 1.4em;
+}
+#view h3 {
+  font-size: 1.2em;
+}
+#view h4 {
+  font-size: 1.1em;
+}
+#view h5 {
+  font-size: 1em;
+}
+#view h6 {
+  font-size: 0.9em;
+}
+
+#view h1:before , #view h2:before , #view h3:before , #view h4:before , #view h5:before , #view h6:before {
+  position: absolute;
+  content: "#";
+  color:#ff0500;
+  margin-right: -13px;
+  margin-top: 2px;
+  vertical-align: bottom;
+  opacity: 0.5;
+}
+
+#view blockquote {
+  border-left: 0px;
+  border-right: 4px solid rgba( 255 , 5 , 0 , 0.4 );
+  background-color: rgba( 0 , 0 , 204 , 0.01 );
+  border-radius: 3px;
+  font-size: 1em;
+}
+
+#view ul , #view ol {
+  padding-right: 0.75em;
+}
+
+#view h1 , #view h2 , #view h3 , #view h4 , #view h5 , #view h6 , #view p {
+  margin-bottom: 0.75em;
+}
+
+#view h1 , #view h2 , #view h3 , #view h4 , #view h5 , #view h6 {
+  margin-top: 1.25em;
+}
+
+#view .footnote {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+#view img {
+  margin: 10px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.3)
+}
+
+#view table {
+  font-size: 90%;
+  color: #29333d;
+  background-color: rgba(102, 128, 153, 0.075);
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-spacing: 2px;
+  border-collapse: collapse;
+}
+
+#view table td , #view table th {
+  padding: 5px;
+  text-align: center;
+}
+
 #view code {
-	display: inline-block;
-	direction: ltr;
-	font-family: 'Fira Mono', sans-serif;
-	padding: 0.5em;
-	font-size: 0.9em;
-	color: #913D88;
-	background-color: beige;
+  display: inline-block;
+  direction: ltr;
+  font-family: 'Fira Mono', sans-serif;
+  padding: 0.3em;
+  margin: 0.2em;
+  font-size: 0.7em;
+  color: rgb(204, 0, 0);
+  background-color: #f3f3ff;
+}
+
+#view pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #fcfcff;
+  border: 1px solid #f3f6f7;
+  border-radius: 4px;
 }
 
 #view pre code {
-	display: block;
-	direction: ltr;
-	font-family: 'Fira Mono', sans-serif;
-	margin-left: 2em;
-	font-size: 0.9em;
-	color: #913D88;
-	background-color: beige;
+  display: block;
+  direction: ltr;
+  font-family: 'Fira Mono', sans-serif;
+  margin-left: 0em;
+  font-size: 1.05em;
+  color: #d80092;
+  background-color: inherit;
 }
 
 
 
-#view .code,
-#view .pre,
-#view .table {
-  font-family: "Courier New", monospace;
-  font-size: 80%;
-  color: #29333d;
-}
 #view .tag {
   color: #29333d;
 }
@@ -87,44 +159,17 @@
   color: #47596b;
   font-weight: bold;
 }
-#view .code,
+
 #view .img,
-#view .imgref,
-#view .pre,
-#view .table {
+#view .imgref{
   background-color: rgba(102, 128, 153, 0.075);
 }
-#view .pre,
-#view .table {
-  padding: 4px 0;
-}
+
 #view .link .md-underlined-text,
 #view .linkref .md-underlined-text {
   color: inherit;
 }
-#view .blockquote {
-  color: #668099;
-}
-#view .h1,
-#view .h11 {
-  font-size: 1.7em;
-}
-#view .h2,
-#view .h22 {
-  font-size: 1.4em;
-}
-#view .h3 {
-  font-size: 1.2em;
-}
-#view .h4 {
-  font-size: 1.1em;
-}
-#view .h5 {
-  font-size: 1em;
-}
-#view .h6 {
-  font-size: 0.9em;
-}
+
 #view .md-hash {
   color: rgba(102, 128, 153, 0.4);
 }
