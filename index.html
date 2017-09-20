@@ -25,7 +25,10 @@
 <link type="text/css" rel="stylesheet" href="view/view.css">
 <link type="text/css" rel="stylesheet" href="style.css">
 
-<button id="viewbtn" style="position:absolute; left:20px; top:10px; z-index:100;">View</button>
+<div style="position:absolute; left:20px; top:10px; z-index:100; opacity: 0.3;">
+	<button id="stopbtn">Stop</button>
+	<button id="viewbtn">View</button>
+</div>
 
 <div id="view">
 	
@@ -94,6 +97,14 @@
 		view();
 		$( "#viewbtn" ).on( "click" , function() {
 			view();
+		} );
+
+		var timer = setInterval( function() {
+			view();
+		} , 100 );
+
+		$( "#stopbtn" ).on( "click" , function() {
+			clearInterval( timer );
 		} );
 
 	} );
